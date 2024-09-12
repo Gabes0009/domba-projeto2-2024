@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 100vh; /* Ajuste para preencher a altura da janela de visualização */
     margin: 0;
 }
 
@@ -13,6 +13,17 @@ button {
     background-color: #64A712;
     color: white;
     font-family: "Bai Jamjuree", sans-serif;
+    border: none;
+    border-radius: 8px; /* Borda arredondada */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #4F8A10; /* Cor de fundo quando o botão é hover */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 .passo {
@@ -20,14 +31,20 @@ button {
 }
 
 .passo.ativo {
-    display:block;
+    display: block;
 }
 
 main {
     text-align: center;
     max-width: 90%;
+    max-height: 90%;
+    overflow: hidden; /* Evita rolagem indesejada */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
 }
 
 img {
-    max-width: 90%;
+    max-width: 100%; /* Ajusta a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
 }
